@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shriwardhan Karanje – Aspiring Software Developer from PCCOE Pune. Portfolio showcasing projects in Java, Python, and Web Development." />
+  <meta name="keywords" content="Shriwardhan Karanje, Software Developer, PCCOE, Pune, Portfolio, Java, Python, Web Development" />
+  <title>Shriwardhan Karanje — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-bracket">[</span>
+        <span class="loader-initials">SK</span>
+        <span class="loader-bracket">]</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-text" id="loaderText">Initializing...</p>
+    </div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Mouse Glow -->
+  <div class="mouse-glow" id="mouseGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-bracket">[</span>
+      <span>SK</span>
+      <span class="nav-bracket">]</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#goals" class="nav-link">Goals</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─────────────────────────── HERO ─────────────────────────── -->
+  <section class="hero" id="home">
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Grid overlay -->
+    <div class="grid-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-greeting reveal-text">Hello, World! 👋</p>
+      <h1 class="hero-name reveal-text">
+        I'm <span class="gradient-text">Shriwardhan</span><br />Karanje
+      </h1>
+      <div class="hero-role">
+        <span class="role-static">I'm a </span>
+        <span class="role-dynamic" id="typingText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc reveal-text">
+        A passionate B.Tech student at PCCOE Pune, crafting elegant code and building the future — one project at a time.
+      </p>
+      <div class="hero-cta reveal-text">
+        <a href="#projects" class="btn btn-primary magnetic">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal-text">
+        <div class="stat">
+          <span class="stat-num">7+</span>
+          <span class="stat-label">Skills Mastered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Problems to Solve</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="window-title">shriwardhan.java</span>
+        </div>
+        <pre class="window-code"><code><span class="c-keyword">public class</span> <span class="c-class">Shriwardhan</span> {
+
+  <span class="c-keyword">private</span> String name = <span class="c-string">"Shriwardhan Karanje"</span>;
+  <span class="c-keyword">private</span> String role = <span class="c-string">"Software Developer"</span>;
+  <span class="c-keyword">private</span> String college = <span class="c-string">"PCCOE, Pune"</span>;
+
+  <span class="c-keyword">public</span> String[] getSkills() {
+    <span class="c-keyword">return new</span> String[]{
+      <span class="c-string">"Java"</span>, <span class="c-string">"Python"</span>, <span class="c-string">"C"</span>,
+      <span class="c-string">"JavaScript"</span>, <span class="c-string">"HTML/CSS"</span>
+    };
+  }
+
+  <span class="c-keyword">public</span> String getGoal() {
+    <span class="c-keyword">return</span> <span class="c-string">"Build impactful software"</span>;
+  }
+}</code></pre>
+        <div class="window-glow"></div>
+      </div>
+      <div class="floating-badge badge-1">
+        <i class="fa-brands fa-java"></i> Java
+      </div>
+      <div class="floating-badge badge-2">
+        <i class="fa-brands fa-python"></i> Python
+      </div>
+      <div class="floating-badge badge-3">
+        <i class="fa-brands fa-js"></i> JS
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── ABOUT ─────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-eyebrow reveal">About Me</div>
+      <h2 class="section-title reveal">The Story So Far</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Hey there! I'm <strong>Shriwardhan Karanje</strong>, a B.Tech student at
+            <strong>Pimpri Chinchwad College of Engineering (PCCOE)</strong>, Pune — one of Maharashtra's premier engineering institutes.
+          </p>
+          <p>
+            I'm deeply passionate about software development and the art of turning ideas into working products. Whether it's writing clean object-oriented Java, scripting Python utilities, or building interactive web interfaces, I approach every challenge with curiosity and persistence.
+          </p>
+          <p>
+            I believe great software is less about cleverness and more about clarity — code that communicates, systems that scale, and products that make people's lives genuinely better.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Team Player</span>
+            <span class="tag">Detail-Oriented</span>
+          </div>
+        </div>
+
+        <div class="about-card-wrap reveal">
+          <div class="about-info-card">
+            <div class="info-row">
+              <i class="fa-solid fa-user"></i>
+              <div>
+                <span class="info-label">Name</span>
+                <span class="info-value">Shriwardhan Karanje</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Pune, Maharashtra, India</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Tech (Pursuing)</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-building-columns"></i>
+              <div>
+                <span class="info-label">College</span>
+                <span class="info-value">PCCOE, Pune</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-heart"></i>
+              <div>
+                <span class="info-label">Interests</span>
+                <span class="info-value">Coding, Problem Solving, Tech</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm magnetic">
+              <span>Hire Me</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── SKILLS ─────────────────────────── -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-eyebrow reveal">What I Know</div>
+      <h2 class="section-title reveal">Technical Arsenal</h2>
+
+      <div class="skills-categories">
+        <!-- Programming Languages -->
+        <div class="skill-category reveal">
+          <h3 class="category-title">
+            <i class="fa-solid fa-code"></i> Programming Languages
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-level="85">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-solid fa-c"></i> C</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item" data-level="80">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item" data-level="78">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category reveal">
+          <h3 class="category-title">
+            <i class="fa-solid fa-palette"></i> Frontend Development
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name"><i class="fa-brands fa-css3"></i> Tailwind CSS</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category reveal">
+          <h3 class="category-title">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Tools & Technologies
+          </h3>
+          <div class="tools-grid">
+            <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+            <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+            <div class="tool-chip"><i class="fa-solid fa-terminal"></i> VS Code</div>
+            <div class="tool-chip"><i class="fa-solid fa-cube"></i> IntelliJ</div>
+            <div class="tool-chip"><i class="fa-brands fa-linux"></i> Linux CLI</div>
+            <div class="tool-chip"><i class="fa-solid fa-database"></i> SQL Basics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── EDUCATION ─────────────────────────── -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-eyebrow reveal">Academic Journey</div>
+      <h2 class="section-title reveal">Education</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2023 — Present</div>
+            <h3 class="timeline-degree">Bachelor of Technology (B.Tech)</h3>
+            <p class="timeline-school">
+              <i class="fa-solid fa-building-columns"></i>
+              Pimpri Chinchwad College of Engineering (PCCOE)
+            </p>
+            <p class="timeline-location">
+              <i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India
+            </p>
+            <p class="timeline-desc">
+              Pursuing B.Tech with a strong focus on software engineering fundamentals, data structures, algorithms, and full-stack development. Actively participating in coding competitions and tech clubs.
+            </p>
+            <div class="timeline-badges">
+              <span class="badge-pill">Data Structures</span>
+              <span class="badge-pill">OOP</span>
+              <span class="badge-pill">DBMS</span>
+              <span class="badge-pill">OS</span>
+              <span class="badge-pill">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot timeline-dot-sm"></div>
+          <div class="timeline-card timeline-card-sm">
+            <div class="timeline-date">2021 — 2023</div>
+            <h3 class="timeline-degree">Higher Secondary Certificate (HSC)</h3>
+            <p class="timeline-school">
+              <i class="fa-solid fa-school"></i> Maharashtra State Board
+            </p>
+            <p class="timeline-desc">Completed HSC with a science stream (PCM), building a strong mathematical and logical foundation for engineering studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── PROJECTS ─────────────────────────── -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-eyebrow reveal">What I've Built</div>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <p class="section-subtitle reveal">
+        A selection of real-world projects that demonstrate my skills and problem-solving approach.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="project-link project-link-live" title="Live Demo" aria-label="Live Demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Student Management System</h3>
+          <p class="project-desc">
+            A comprehensive Java application for managing student records with full CRUD operations, search functionality, and grade tracking. Built with OOP principles and file-based data persistence.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag">File I/O</span>
+            <span class="project-tag">Data Structures</span>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card project-card-featured reveal">
+          <div class="project-featured-label">Featured</div>
+          <div class="project-header">
+            <div class="project-icon project-icon-web">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="project-link project-link-live" title="Live Demo" aria-label="Live Demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-desc">
+            The very site you're browsing — a fully custom-built futuristic portfolio featuring particle animations, glassmorphism design, smooth scroll reveals, and responsive layout. Zero frameworks, pure craftsmanship.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Canvas API</span>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon project-icon-python">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="project-link project-link-live" title="Live Demo" aria-label="Live Demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Python Utility Toolkit</h3>
+          <p class="project-desc">
+            A collection of Python scripts for everyday developer tasks: file organizer, bulk renamer, text processor, and a simple web scraper. Built with a clean CLI interface and modular architecture.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">CLI</span>
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">Web Scraping</span>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── GOALS ─────────────────────────── -->
+  <section class="section" id="goals">
+    <div class="container">
+      <div class="section-eyebrow reveal">Where I'm Headed</div>
+      <h2 class="section-title reveal">Career Goals</h2>
+
+      <div class="goals-layout">
+        <div class="goals-statement reveal">
+          <blockquote class="mission-quote">
+            "I want to build software that solves real problems for real people — systems that scale, interfaces that delight, and code that stands the test of time."
+          </blockquote>
+          <p class="goals-body">
+            My immediate focus is landing a software development internship where I can contribute to production systems while deepening my skills in backend engineering and system design. Long-term, I aim to work on distributed systems and developer tooling — building the infrastructure that empowers other engineers.
+          </p>
+        </div>
+
+        <div class="goals-cards reveal">
+          <div class="goal-card">
+            <div class="goal-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h4>Short Term</h4>
+            <p>Secure a software internship, contribute to open source, and master DSA for competitive programming.</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h4>Mid Term</h4>
+            <p>Build full-stack applications, learn cloud fundamentals (AWS/GCP), and develop a strong GitHub presence.</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon"><i class="fa-solid fa-star"></i></div>
+            <h4>Long Term</h4>
+            <p>Join a top tech company as a software engineer and contribute to products that impact millions of users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── CONTACT ─────────────────────────── -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-eyebrow reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="section-subtitle reveal">
+        Open to internship opportunities, collaborations, and tech conversations. Don't hesitate to reach out.
+      </p>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <a href="mailto:shriwardhan@email.com" class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">shriwardhan@email.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="contact-item-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">github.com/shriwardhan</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="contact-item-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">linkedin.com/in/shriwardhan</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <span class="contact-item-label">Location</span>
+              <span class="contact-item-value">Pune, Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="formName" class="form-input" placeholder=" " required autocomplete="name" />
+            <label for="formName" class="form-label">Your Name</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="formEmail" class="form-input" placeholder=" " required autocomplete="email" />
+            <label for="formEmail" class="form-label">Email Address</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="formSubject" class="form-input" placeholder=" " />
+            <label for="formSubject" class="form-label">Subject</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="formMessage" class="form-input form-textarea" placeholder=" " required rows="5"></textarea>
+            <label for="formMessage" class="form-label">Message</label>
+            <div class="form-line"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full magnetic">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="nav-bracket">[</span>SK<span class="nav-bracket">]</span>
+      </div>
+      <p class="footer-tagline">Built with passion, precision, and a lot of coffee ☕</p>
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:shriwardhan@email.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 Shriwardhan Karanje. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
